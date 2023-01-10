@@ -1,0 +1,384 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+/* -----------------------------------Colors----------------------------------- */
+
+:root {
+    --oragne: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --mediumGreyOp: hsla(216, 12%, 54%,0.2);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+/* -----------------------------------Styling----------------------------------- */
+
+body {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--veryDarkBlue);
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+/* ---rating-container--- */
+
+#rating-container {
+    background-color: var(--darkBlue);
+    padding: 2rem;
+    max-width: 400px;
+    border-radius: 1.5rem;
+    display: grid;
+    place-content: center;
+}
+
+#star {
+    margin-bottom: 1.75rem;
+    background-color: var(--mediumGreyOp);
+    width: 48px;
+    border-radius: 50%;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+}
+
+#rating-container h1 {
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+#rating-container p {
+    margin-bottom: 1.5rem;
+    color: var(--mediumGrey);
+    font-size: .94rem;
+}
+
+#rating-inputs {
+    margin-bottom: 1.8rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1.3rem;
+}
+
+#rating-inputs input {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    color: var(--mediumGrey);
+    background-color: var(--mediumGreyOp);
+}
+
+#rating-inputs input:hover {
+    color: var(--white);
+    background-color: var(--oragne);
+}
+
+#rating-inputs input:focus {
+    color: var(--white);
+    background-color: var(--lightGrey);
+}
+
+
+#submit-btn {
+    font-family: 'Overpass', sans-serif;
+    padding: .8rem;
+    border-radius: 5rem;
+    border: none;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--oragne);
+    font-size: .93rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+#submit-btn:hover {
+    color: var(--oragne);
+    background-color: var(--white);
+}
+
+/* ---thank you container--- */
+
+#thankyou-container {
+    background-color: var(--darkBlue);
+    padding: 2rem;
+    max-width: 400px;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+#thankyou-container svg {
+    margin-bottom: 2rem;
+}
+
+#thankyou-container #selcted {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#thankyou-container #selcted p {
+    background-color: var(--mediumGreyOp);
+    color: var(--oragne);
+    padding: .5rem;
+    border-radius: 5rem;
+    width: 185px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#thankyou-container h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#thankyou-container p {
+    color: var(--mediumGrey);   
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+/* ---footer--- */
+
+footer {
+    padding: 2.5rem;
+    color: var(--mediumGrey);
+}
+
+footer p {
+    font-size: .8rem;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* ---------------------------------------mobile version--------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+    #rating-container {
+        max-width: 390px;
+    }
+
+    #thankyou-container {
+        max-width: 390px;
+    }
+
+    #rating-inputs input {
+        padding: .95rem;
+    }
+
+    #star {
+        padding: .95rem;
+        width: 46px;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #rating-container {
+        max-width: 375px;
+    }
+
+    #thankyou-container {
+        max-width: 375px;
+    }
+
+    #rating-inputs input {
+        padding: .8rem;
+    }
+
+    #star {
+        padding: .8rem;
+        width: 44px;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    #rating-container {
+        max-width: 363px;
+    }
+
+    #thankyou-container {
+        max-width: 363px;
+    }
+    
+    #star {
+        padding: .73rem;
+        width: 41px;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #rating-container {
+        max-width: 355px;
+    }
+
+    #thankyou-container {
+        max-width: 355px;
+    }
+
+    #rating-inputs input {
+        padding: .7rem;
+    }
+
+    #star {
+        padding: .75rem;
+        width: 40px;
+    }
+
+    #rating-container p {
+        font-size: .89rem;
+    }
+
+    #rating-container h1 {
+        font-size: 1.65rem;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    #rating-container {
+        max-width: 350px;
+    }
+
+    #thankyou-container {
+        max-width: 355px;
+    }
+
+    #rating-container h1 {
+        font-size: 1.6rem;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 395px) {
+    #rating-container {
+        max-width: 345px;
+    }
+
+    #thankyou-container {
+        max-width: 345px;
+    }
+
+    #rating-container h1 {
+        font-size: 1.55rem;
+    }
+
+    #thankyou-container p {
+        font-size: .9rem;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 385px) {
+    #rating-container {
+        max-width: 338px;
+    }
+
+    #thankyou-container {
+        max-width: 338px;
+    }
+    
+    #rating-container p {
+        font-size: .87rem;
+    }
+
+    #rating-inputs input {
+        padding: .65rem;
+    }
+
+    #star {
+        padding: .65rem;
+        width: 38px;
+    }
+
+    #thankyou-container p {
+        font-size: .87rem;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #rating-container {
+        max-width: 330px;
+    }
+
+    #thankyou-container {
+        max-width: 330px;
+    }
+
+    #rating-container p {
+        font-size: .84rem;
+    }
+
+    #rating-inputs input {
+        padding: .6rem;
+    }
+
+    #star {
+        padding: .6rem;
+        width: 36px;
+    }
+
+    #thankyou-container p {
+        font-size: .86rem;
+    }
+
+    main {
+        display: grid;
+        place-items: center;
+    }
+}
